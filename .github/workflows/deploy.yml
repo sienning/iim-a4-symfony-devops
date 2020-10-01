@@ -1,0 +1,13 @@
+name: Deploy website to Heroku
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # ça va faire un git clone
+      - uses: actions/checkout@v2
+      # linter
+      - uses: michaelw90/PHP-Lint@master
